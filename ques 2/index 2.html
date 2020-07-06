@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>There will be some numbers in an array, and you have to count the frequency of the numbers and print the frequency with the number. Like : 
+24 - 3 times
+17 - 1 time
+19 - 2 times
+</p>
+	<script>
+		var seedData=[24,24 ,24 ,17 ,19 ,19 ];
+		var vis=[0,0,0,0,0,0];
+		for (var i=0; i<seedData.length; i++)
+		{
+			var cnt=0;
+			if(vis[i]==0)
+			{
+				for (var j=0; j<seedData.length; j++)
+				{
+					if(seedData[i]==seedData[j]&&vis[j]==0)
+						cnt++,vis[j]=1;
+				}
+				if(cnt==1)
+				{
+				   console.log(seedData[i]+' '+cnt+' time');
+				}
+				else
+				 {
+				 	console.log(seedData[i]+' '+cnt+' times');
+				 }
+			// console.log(cnt+' times');
+			}
+			
+		}
+
+		
+	</script>
+</body>
+</html>

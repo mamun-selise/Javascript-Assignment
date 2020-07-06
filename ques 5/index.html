@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Draw a Diamond shape using loops. Use single * to generate shapes of different sizes. The following sample is for size 3
+</p>
+	<script>
+		var i,j,size=3;
+		for(var i=1;i<=size;i++)
+		{
+			var starString = '';
+			var k=size-i;
+			for(j=1;j<=k;j++)
+			{
+				starString = starString + ' ';
+			}
+			for(j=1;j<=(2*i)-1;j++)
+			{
+				 starString = starString + '*';
+			}
+			console.log(starString);
+		}
+		for(var i=size-1;i>=1;i--)
+		{
+			var starString = '';
+			var k=size-i;
+			for(j=1;j<=k;j++)
+			{
+				starString=starString+' ';
+			}
+			for(j=1;j<=(2*i)-1;j++)
+			{
+				starString=starString+'*';
+			}
+			console.log(starString);
+		}
+	</script>
+</body>
+</html>

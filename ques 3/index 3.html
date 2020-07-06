@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <p>Write a function that will take a string as input and then count how many words are there in the string. Words are separate by one or more spaces. You should use string and array functions to accomplish the task.</p>
+
+   <script >
+       function WordsCount(text) 
+       {
+           let ar = text.split(" ");
+           while (ar.indexOf("") != -1) 
+           {
+               let index = ar.indexOf("");
+               ar.splice(index, 1);
+           }
+         let count1 = "<h3>Total Word = " + ar.length + "</h3><p> ";
+           for (i = 0; i < ar.length; i++)
+               count1 += ar[i] + " ";
+           count1 += "</p>";
+           document.write(count1);
+       }
+       let word="Hello programmer";
+       WordsCount(word);
+   </script>
+
+</body>
+
+</html>

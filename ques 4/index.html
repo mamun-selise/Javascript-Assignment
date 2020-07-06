@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Declare a 2D array and initialize each cell of that 2D matrix with a sequential number. That is a 4x4 matrix will be populated with numbers from 1 to 16. The top left corner cell should be 1 and bottom right should be 16. That is, array [ 0][0] should be 1 and array[3][3] should be 16. The array values should be set using for loops.
+</p>
+	<script>
+		var myArray = new Array(4);
+		var i,j,cnt=1;
+	    for(i=0; i<myArray.length; i++) 
+	    {
+	      myArray[i] = new Array(4);
+	    }
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				myArray[i][j]=(cnt++);
+			}
+		}
+		for(i=0;i<4;i++)
+		{
+			for(j=0;j<4;j++)
+			{
+				document.write(myArray[i][j]+' ');
+			}
+			document.write("<br>"); 
+		}
+	</script>
+</body>
+</html>
